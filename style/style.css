@@ -1,0 +1,184 @@
+html {
+    background: #fff;
+    max-width: 100vw;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+html * {
+    outline: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Override the bootstrap defaults */
+
+h1 {
+    font-size: 60px;
+    line-height: 113.6%;
+}
+
+h2 {
+    font-size: 60px;
+    line-height: 113.6%;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 113.6%;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 113.6%;
+}
+
+h5 {
+    font-size: 12px;
+}
+
+h6 {
+    font-size: 10.2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+legend {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+label {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+select.form-control,
+textarea.form-control,
+input[type="text"].form-control,
+input[type="password"].form-control,
+input[type="datetime"].form-control,
+input[type="datetime-local"].form-control,
+input[type="date"].form-control,
+input[type="month"].form-control,
+input[type="time"].form-control,
+input[type="week"].form-control,
+input[type="number"].form-control,
+input[type="email"].form-control,
+input[type="url"].form-control,
+input[type="search"].form-control,
+input[type="tel"].form-control,
+input[type="color"].form-control {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.input-group input,
+.input-group select,
+.input-group .dropdown-menu,
+.input-group .popover {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.input-group .input-group-addon {
+    font-size: 20px;
+    line-height: 130%;
+    height: 30px;
+}
+
+button {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* Landing Page Style */
+
+body {
+    min-width: 320px;
+    max-width: 2400px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #999999;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1540px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.container-full-width {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.sing-in-link {
+    padding: 0 3%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+.sing-in-link a {
+    color: #5cba4a;
+    padding-left: 5px;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+
+.sing-in-link a:hover,
+.sing-in-link a:focus,
+.sing-in-link a:active {
+    text-decoration: underline;
+}
+
+.col-50 {
+    max-width: 50%;
+}
+
+.header-content-col {
+
+}
