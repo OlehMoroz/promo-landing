@@ -387,7 +387,7 @@ h2, .section-title {
 
 .testimonial-row {
     width: calc(100% + 30px);
-    margin: 0 -15px;
+    margin: 0 -7px;
 }
 
 .testimonial-item {
@@ -396,7 +396,7 @@ h2, .section-title {
     padding: 21px;
     border-radius: 20px;
     background: #f1f1f1;
-    margin: 15px;
+    margin: 7px;
 }
 
 .testimonial-item_header {
@@ -490,11 +490,19 @@ h2, .section-title {
     flex-direction: column;
 }
 
+.plans-item-bussines a {
+    background: #000;
+}
+
 .plans-name {
     font-size: 48px;
     font-weight: 500;
     color: #000000;
     margin-bottom: 20px;
+}
+
+.plans-item-bussines a .plans-name {
+    color: #fff;
 }
 
 .plans-members {
@@ -519,6 +527,18 @@ h2, .section-title {
     font-size: 65px;
     font-weight: 500;
     line-height: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.prise-description {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    opacity: 35%;
+    max-width: 31%;
+    line-height: 1em;
+    margin: 10px 0 10px 10px;
 }
 
 .plans-prise_row::after {
@@ -535,6 +555,15 @@ h2, .section-title {
     color: #fff;
     transition: all .5s linear;
     font-size: 19px;
+}
+
+.plans-item-bussines a .plans-prise_row .plans {
+    color: #fff;
+}
+
+.plans-item-bussines a .plans-prise_row::after {
+    background: #afff2c;
+    color: #000000;
 }
 
 .plans-list-title {
@@ -662,4 +691,171 @@ footer .container .row {
 .footer-links ul li a:hover, .footer-links ul li a:focus, .footer-links ul li a:active,
 .footer-social-links a:hover, .footer-social-links a:focus, .footer-social-links a:active {
     opacity: 1;
+}
+
+@media screen and (max-width: 1450px) {
+    select.form-control,
+textarea.form-control,
+input[type="text"].form-control,
+input[type="password"].form-control,
+input[type="datetime"].form-control,
+input[type="datetime-local"].form-control,
+input[type="date"].form-control,
+input[type="month"].form-control,
+input[type="time"].form-control,
+input[type="week"].form-control,
+input[type="number"].form-control,
+input[type="email"].form-control,
+input[type="url"].form-control,
+input[type="search"].form-control,
+input[type="tel"].form-control,
+input[type="color"].form-control {
+    font-size: 18px;
+}
+
+label {
+    font-size: 18px;
+}
+
+legend {
+    font-size: 18px;
+}
+
+    .header-content-col h1 {
+        font-size: 78px;
+        line-height: 85px;
+    }
+
+    .main-form-wrap {
+        padding: 10px 0 10px 5%;
+        margin: 40px 0 80px;
+    }
+
+    .main-form-wrap h2 {
+        font-size: 33px;
+    }
+
+    .form-row {
+        margin: 0px 0;
+    }
+
+    .header-content-col h1 {
+        margin: 155px 5% 350px 0;
+    }
+
+    .form-row input {
+        font-size: 16px;
+    }
+    
+    .testimonial-date {
+        font-size: 16px;
+    }
+
+    .form-row label {
+        font-size: 16px;
+    }
+
+    .footer-links ul li a, .footer-social-links a {
+        font-size: 16px;
+    }
+
+    .footer-date {
+        font-size: 16px;
+    }
+
+    .prise-description {
+        font-size: 16px;
+    }
+
+    .testimonial-date {
+        font-size: 18px;
+    }
+
+    .input-group .input-group-addon {
+        font-size: 18px;
+    }
+
+    .input-group input,
+.input-group select,
+.input-group .dropdown-menu,
+.input-group .popover {
+    font-size: 18px;
+}
+
+.submit-button {
+    font-size: 18px;
+}
+
+h2, .section-title {
+    color: #000000;
+    font-size: 53px;
+    font-weight: 500;
+    line-height: 60px;
+}
+
+.testimonial-item_content {
+    color: #000000;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.brands-description {
+    font-size: 20px;
+}
+
+body {
+    font-size: 22px;
+}
+
+.brands-logo-item img {
+    max-width: 100%;
+}
+
+.col-60 {
+    max-width: 56%;
+}
+
+
+}
+
+@media screen and (max-width: 1350px) {
+    .brands-logo_wrap .brands-logo-item:nth-child(2),
+    .brands-logo_wrap .brands-logo-item:nth-child(3) {
+        max-width: 45%;
+    }
+}
+
+@media screen and (max-width: 753px) {
+    .container-full-width::before {
+        display: none;
+    }
+
+    .header-content-col {
+        display: none;
+    }
+
+    .main-form-wrap {
+        padding: 0;
+        margin: 70px 0 0;
+    }
+    .col-40 {
+        max-width: 100%;
+    }
+
+    .terms-text {
+        text-align: center;
+    }
+
+    .section-title {
+        max-width: 100%;
+        margin: 120px 0 80px;
+    }
+
+    .testimonial-item {
+        width: 100%;
+    }
+
+    .col-50 {
+        max-width: 100%;
+    }
 }
