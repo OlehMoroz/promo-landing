@@ -201,7 +201,7 @@ body {
     display: block;
     box-sizing: border-box;
     position: absolute;
-    background: url("/asset/images/main-image.png") right -30% bottom -50px / contain no-repeat,#c1d1ea;
+    background: url("/asset/images/main-image.png") center / cover no-repeat;
 }
 
 .container-full-width .container {
@@ -218,7 +218,7 @@ body {
     color: #fff;
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    margin: 175px 5% 350px 0;
+    margin: 60px 5% 350px 0;
 }
 
 
@@ -388,10 +388,11 @@ h2, .section-title {
 .testimonial-row {
     width: calc(100% + 30px);
     margin: 0 -7px;
+    flex-direction: column;
 }
 
 .testimonial-item {
-    width: calc((100% / 3) - 30px);
+    width: calc((100% / 3) - 7px);
     box-sizing: border-box;
     padding: 21px;
     border-radius: 20px;
@@ -464,15 +465,16 @@ h2, .section-title {
 }
 
 .plans-item {
-    width: calc(50% - 30px);
-    margin: 0 15px 157px;
+    width: calc(50% - 15px);
+    margin: 0 0px 157px 15px;
     position: relative;
     left: -15px;
 }
 
 .plans-item-bussines {
     left: auto;
-    right: -15px
+    right: -15px;
+    margin: 0 15px 157px 0;
 }
 
 .plans-item_header {
@@ -488,6 +490,8 @@ h2, .section-title {
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 375px;
 }
 
 .plans-item-bussines a {
@@ -499,6 +503,7 @@ h2, .section-title {
     font-weight: 500;
     color: #000000;
     margin-bottom: 20px;
+    line-height: 1em;
 }
 
 .plans-item-bussines a .plans-name {
@@ -523,8 +528,9 @@ h2, .section-title {
 }
 
 .plans {
+    max-width: 85%;
     color: #000000;
-    font-size: 65px;
+    font-size: 48px;
     font-weight: 500;
     line-height: 1em;
     display: flex;
@@ -533,16 +539,16 @@ h2, .section-title {
 
 .prise-description {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     opacity: 35%;
-    max-width: 31%;
-    line-height: 1em;
+    max-width: 40%;
+    line-height: 1.3em;
     margin: 10px 0 10px 10px;
 }
 
 .plans-prise_row::after {
-    content: '\f061';
+    content: '\f00d';
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900;
     width: 60px;
@@ -562,8 +568,9 @@ h2, .section-title {
 }
 
 .plans-item-bussines a .plans-prise_row::after {
-    background: #afff2c;
-    color: #000000;
+    background: #5cba4a;
+    color: #fff;
+    content: '\f00c';
 }
 
 .plans-list-title {
@@ -590,6 +597,7 @@ h2, .section-title {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    font-size: 20px;
 }
 
 .plans-list li::before {
@@ -614,7 +622,7 @@ h2, .section-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: url("/asset/images/video-bg.png") center / cover no-repeat;
     border-radius: 20px;
     margin: 70px auto 90px;
 }
@@ -825,6 +833,69 @@ body {
     }
 }
 
+@media screen and (max-width: 1235px) {
+    .main-form-wrap {
+        min-width: 420px;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .header-content-col, .container-full-width::before {
+        display: none;
+    }
+
+    .main-form-wrap {
+        min-width: 70%;
+        margin: 20px auto;
+    }
+
+    .section-title {
+        max-width: 70%;
+    }
+
+    .testimonial-item {
+        width: calc((100% / 2) - 30px);
+    }
+
+    .col-50 {
+        max-width: 100%;
+    }
+
+    .brands-logo_wrap {
+        margin: 100px 0 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brands-logo-item img {
+        max-width: 90%;
+    }
+
+    .video-player-block {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .footer-date {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    footer {
+        width: 100%;
+        background: #000000;
+        margin-top: 100px;
+    }
+    .section-title {
+        max-width: 90%;
+    }
+    
+}
+
 @media screen and (max-width: 753px) {
     .container-full-width::before {
         display: none;
@@ -1004,6 +1075,10 @@ body {
 
     .sing-in-link {
         padding: 0 5%;
+    }
+
+    .testimonial-row {
+        flex-wrap: nowrap;
     }
 }
 
