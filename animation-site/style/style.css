@@ -215,7 +215,7 @@ body {
     display: block;
     box-sizing: border-box;
     position: absolute;
-    background: url("/asset/images/main-image.png") center / cover no-repeat;
+    background: url("../asset/images/main-image.png") center / cover no-repeat;
     animation: fullWidth 1.5s linear;
 }
 
@@ -757,14 +757,14 @@ h2, .section-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("/asset/images/video-bg.png") center / cover no-repeat;
+    background: url("../asset/images/video-bg.png") center / cover no-repeat;
     border-radius: 20px;
     margin: 70px auto 90px;
     animation-delay: .4s;
 }
 
 .video-player-block::before {
-    content: url("/asset/images/Button.png");
+    content: url("../asset/images/Button.png");
 }
 
 .footer-form-section_title {
