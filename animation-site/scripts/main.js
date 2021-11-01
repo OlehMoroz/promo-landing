@@ -33,9 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
             brandsLogo.appendChild(brandSubTitle);
             buttonShowAll.style.display = 'flex';
             resizeValidate = true;
-        } else {
-            buttonShowAll.style.display = 'none';
-            document.querySelector('.brands-content').appendChild(brandSubTitle);
         }
     }
 
@@ -100,5 +97,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     animate.init();
-
 });
