@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
         brandsLogo = document.querySelector('.brands-logo_wrap'),
         testimonialWrap = document.querySelector('.testimonial-row'),
         testimonialItem = document.querySelectorAll('.testimonial-item'),
+        dateSelector = document.querySelector('.footer-date span'),
         buttonShowAll = document.createElement('button');
 
         buttonShowAll.classList.add('button-show-all');
         buttonShowAll.innerHTML = 'show all';
         testimonialWrap.appendChild(buttonShowAll);
         buttonShowAll.style.display = 'none';
+
+        const date = new Date();
+            dateSelector.innerHTML = date.getFullYear();
 
         let resizeValidate = false;
         const btnShow = document.querySelector('.button-show-all'); 
