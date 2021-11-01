@@ -456,12 +456,14 @@ h2, .section-title {
 
 .brands-logo-item img {
     max-width: 100%;
-    filter: grayscale(1) contrast(2);
+    -webkit-filter: grayscale(1) contrast(2);
+            filter: grayscale(1) contrast(2);
     transition: all .3s linear;
 }
 
 .brands-logo-item:hover img {
-    filter: grayscale(0) contrast(1);
+    -webkit-filter: grayscale(0) contrast(1);
+            filter: grayscale(0) contrast(1);
 }
 
 
@@ -832,12 +834,14 @@ body {
 
 .brands-logo-item img {
     max-width: 100%;
-    filter: grayscale(1) contrast(2);
+    -webkit-filter: grayscale(1) contrast(2);
+            filter: grayscale(1) contrast(2);
     transition: all .3s linear;
 }
 
 .brands-logo-item:hover img {
-    filter: grayscale(0) contrast(1);
+    -webkit-filter: grayscale(0) contrast(1);
+            filter: grayscale(0) contrast(1);
 }
 
 .col-60 {
@@ -916,6 +920,15 @@ body {
     .section-title {
         max-width: 90%;
     }
+
+    .prise-description {
+        font-size: 14px;
+    }
+
+    .plans {
+        max-width: 70%;
+        font-size: 30px;
+    }
     
 }
 
@@ -987,7 +1000,7 @@ body {
 
     .plans-item {
         width: 100%;
-        margin: 0 15px 90px;
+        margin: 0 0px 90px;
         position: relative;
         left: 0;
     }
@@ -1142,6 +1155,6 @@ body {
 
     .plans {
         max-width: 70%;
-        font-size: 35px;
+        font-size: 30px;
     }
 }
