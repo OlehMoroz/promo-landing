@@ -1,19 +1,16 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const windowWidthMain = document.documentElement.clientWidth,
+    const windowWidth = document.documentElement.clientWidth, 
         brandSubTitle = document.querySelector('.brands-description'),
         brandsLogo = document.querySelector('.brands-logo_wrap'),
         testimonialWrap = document.querySelector('.testimonial-row'),
         testimonialItem = document.querySelectorAll('.testimonial-item'),
-        testimonialWrapHeight = (maxHeight() / testimonialItem.length) / 2.5,
-        testimonialWrapHeightSmall = testimonialWrapHeight / 3.5,
         buttonShowAll = document.createElement('button');
 
         buttonShowAll.classList.add('button-show-all');
         buttonShowAll.innerHTML = 'show all';
         testimonialWrap.appendChild(buttonShowAll);
-        testimonialWrap.style.height = `${testimonialWrapHeight}px`;
         buttonShowAll.style.display = 'none';
 
         let resizeValidate = false;
@@ -33,26 +30,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function hiddenTestimonialMobile() {
             brandsLogo.appendChild(brandSubTitle);
-            testimonialWrap.style.height = `${testimonialWrapHeightSmall}px`;
             buttonShowAll.style.display = 'flex';
             resizeValidate = true;
     }
+
+    function heightTestimonial() {
+        let testimonialFullWrapHeight = maxHeight() / testimonialItem.length,
+            windowWidthMain = document.documentElement.clientWidth;
+
+            if (windowWidthMain < 1080) {
+                testimonialWrap.style.height = `${testimonialFullWrapHeight / 1.75}px`;
+            } else if (windowWidthMain < 753) {
+                hiddenTestimonialMobile();
+                testimonialWrap.style.height = `${testimonialFullWrapHeight / 2.5}px`;
+            } else {
+                testimonialWrap.style.height = `${testimonialFullWrapHeight / 2.5}px`;
+            }
+    }
+
+    if (windowWidth < 753) {
+        hiddenTestimonialMobile();
+    }
+
+    heightTestimonial();
     
     window.addEventListener('resize', () => {
         resizeValidate = false;
 
         const windowWidth = document.documentElement.clientWidth;
 
+        heightTestimonial();
+
         if (!resizeValidate && windowWidth < 753) {
             hiddenTestimonialMobile();
         } else {
-            if (windowWidth < 1070) {
-                const testimonialWrapHeightNew = (maxHeight() / testimonialItem.length) / 2.5;
-                      testimonialWrap.style.height = `${testimonialWrapHeightNew}px`;
-            } else {
-                const testimonialWrapHeightNew = (maxHeight() / testimonialItem.length) / 1.5;
-                testimonialWrap.style.height = `${testimonialWrapHeightNew}px`;
-            }
 
             buttonShowAll.style.display = 'none';
             document.querySelector('.brands-content').appendChild(brandSubTitle);
@@ -60,29 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    if (windowWidthMain < 1070) {
-        const testimonialWrapHeightNew = (maxHeight() / testimonialItem.length) / 2.5;
-        testimonialWrap.style.height = `${testimonialWrapHeightNew}px`;
-    }
-
-    if (windowWidthMain < 753) {
-        hiddenTestimonialMobile();
-        const testimonialWrapHeightNew = (maxHeight() / testimonialItem.length) / 2.5;
-        testimonialWrap.style.height = `${testimonialWrapHeightNew}px`;
-    }
-
     btnShow.addEventListener('click', () => {
-        const testimonialWrapHeightNew = (maxHeight() / testimonialItem.length) / 2.5,
-            testimonialWrapHeightSmallNew = testimonialWrapHeightNew;
+        heightTestimonial();
 
+        let testimonialFullWrapHeight = maxHeight() / testimonialItem.length,
+            testimonialWrapHeight = testimonialFullWrapHeight
 
         if (!btnShow.classList.contains('button-show-all-active')) {
-            testimonialWrap.style.height = `${testimonialWrapHeightNew}px`;
+            testimonialWrap.style.height = `${testimonialWrapHeight + 100}px`;
 
             btnShow.classList.add('button-show-all-active');
             buttonShowAll.innerHTML = 'hide';
         } else {
-            testimonialWrap.style.height = `${testimonialWrapHeightSmallNew}px`;
+            testimonialWrap.style.height = `${testimonialWrapHeight / 2.5}px`;
             btnShow.classList.remove('button-show-all-active');
             buttonShowAll.innerHTML = 'show all';
         }

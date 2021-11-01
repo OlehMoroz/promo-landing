@@ -839,6 +839,12 @@ body {
     }
 }
 
+@media screen and (max-width: 1080px) {
+    .testimonial-item {
+        width: calc((100% / 2) - 7px);
+    }
+}
+
 @media screen and (max-width: 1075px) {
     .header-content-col, .container-full-width::before {
         display: none;
@@ -851,10 +857,6 @@ body {
 
     .section-title {
         max-width: 70%;
-    }
-
-    .testimonial-item {
-        width: calc((100% / 2) - 30px);
     }
 
     .col-50 {
