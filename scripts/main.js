@@ -29,9 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     function hiddenTestimonialMobile() {
+        if (windowWidth < 753) {
             brandsLogo.appendChild(brandSubTitle);
             buttonShowAll.style.display = 'flex';
             resizeValidate = true;
+        }
     }
 
     function heightTestimonial() {
@@ -48,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     }
 
-    if (windowWidth < 753) {
-        hiddenTestimonialMobile();
-    }
+    hiddenTestimonialMobile();
 
     heightTestimonial();
     
@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!resizeValidate && windowWidth < 753) {
             hiddenTestimonialMobile();
         } else {
-
             buttonShowAll.style.display = 'none';
             document.querySelector('.brands-content').appendChild(brandSubTitle);
         }
